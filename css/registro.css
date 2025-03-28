@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Fondo con degradado */
+  body {
+    background: linear-gradient(135deg, #e6b3ff89, #d89affd8);
+  }
+  
+  /* Contenedor responsivo */
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+  }
+  
+  /* Tarjeta */
+  .card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1.5px solid rgb(92, 91, 91);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Inputs */
+  .input-group {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .input-group-text {
+    background: #f210ae;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+  }
+  
+  .form-control {
+    border: 2px solid #f210ae;
+    padding: 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .form-control:focus {
+    border-color: #ff97d9;
+    box-shadow: 0 0 8px rgba(255, 99, 99, 0.5);
+  }
+  
+  /* Botón */
+  .btn-danger {
+    background: #f210ae;
+    border: none;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 25px;
+    transition: all 0.3s;
+  }
+  
+  .btn-danger:hover {
+    background: #ff97d9;
+  }
+  
+  /* Texto de enlaces */
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  p a {
+    color: #ff97d9;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+    color: #f210ae;
+  }

@@ -1,0 +1,32 @@
+body {
+    background: gray;
+    color: #fff;
+}
+
+header {
+    background: lightblue;
+    padding: 20px;
+    border: solid white;
+}
+
+footer {
+    background: purple;
+    border: solid white;
+}
+
+nav {
+    background: red;
+    padding: 10px;
+    text-decoration: none;
+    border: solid white;
+}
+
+main {
+    background: green;
+    border: solid white;
+}
+
+.col-xl-4 {
+    background: yellow;
+    border: solid green;
+}

@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+@import url('https://fonts.cdnfonts.com/css/self-deception');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #e3e3e3;
+}
+
+/* Estilos generales de la navbar */
+.navbar {
+    background: linear-gradient(135deg, #ff97d9, #f210ae);
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; 
+
+}
+/* contenedor principal */
+.containes-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Logo izquierda */
+.navbar-brand {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 0;
+}   
+.logo {
+    width: 190px;
+    margin-top: -60px;
+    height: auto;
+}
+/* Titulo crazy kid centrado */
+
+.brand-text {
+    font-family: 'Self Deception', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    padding: 0 3%;
+    border-radius: 10px 10px;
+}
+
+/* Links abajo a la derecha centrados*/	
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    margin-top: 10px;
+    margin-right: 100px;
+    gap: 5px;
+}
+
+/* Estilos de los enlaces */
+.navbar-nav .nav-link {
+    color: white !important;
+    margin: 0 60px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Contenedor flexible */
+.d-flex {
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */
+}
+
+
+/* Barra de búsqueda posicionada arriba a la derecha */
+.busqueda {
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del input de búsqueda */
+.busqueda input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px;
+    width: 220px;
+}
+
+/* Ícono de búsqueda */
+.busqueda .icono {
+    margin-left: 30px;
+    cursor: pointer;
+    color: #333;
+    
+}
+
+.busqueda .icono svg {
+    width: 18px;
+    height: 18px;
+    transition: 0.3s;
+    fill: currentColor; /* Ensure the SVG uses the current color */
+}
+
+.busqueda .icono:hover svg {
+    color: #007bff;
+}
+
+/* Navbar centrado */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .brand-text {
+        font-size: 35px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .busqueda {
+        width: 100%;
+        max-width: 250px;
+        margin: 10px auto;
+    }
+
+    .busqueda input {
+        width: 100%;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+}
+
+/* Ajuste de la altura y aspecto de las imágenes del carrusel */
+.carousel-inner img {
+    max-height: 400px; /* Ajusta este valor según lo que necesites */
+    object-fit: contain; /* Muestra la imagen completa sin recortar */
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* Responsividad de las imágenes y captions */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-height: 250px;
+    }
+    .carousel-caption h5 {
+        font-size: 14px;
+    }
+    .carousel-caption p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-inner img {
+        max-height: 180px;
+    }
+}
+
+
+/* Contenedor del botón de navegación del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 35px; /* Tamaño más compacto */
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    opacity: 1; /* Asegura que no se oculten por Bootstrap */
+}
+
+/* Ícono de navegación personalizado */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none; /* Quitamos el ícono predeterminado */
+    font-size: 18px; /* Ajustamos el tamaño del texto */
+    color: rgba(0, 0, 0, 0.489); /* Color del icono */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo sutil */
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Agregamos el contenido con pseudo-elementos */
+.carousel-control-prev::after,
+.carousel-control-next::after {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.carousel-control-prev::after {
+    content: '❮'; /* Flecha más minimalista */
+}
+
+.carousel-control-next::after {
+    content: '❯';
+}
+
+/* Efecto hover para mejor visibilidad */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+
+
+/* Opcional: Animación en las captions */
+.carousel-caption {
+    animation: fadeInUp 1s ease-in-out;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuste del tamaño del carrusel */
+.carousel {
+    max-width: 100%;
+    padding: 0px 0px;
+    margin: 0 auto;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste de posición del texto dentro del carrusel */
+.carousel-caption {
+    position: absolute;
+    bottom: 5%; /* Antes estaba en -20px, lo corregimos */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7); /* Fondo para mejorar la visibilidad */
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mejorar la legibilidad del título y descripción */
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Estilos generales del footer */	
+
+footer {
+    background: linear-gradient(135deg, #e6b3ff, #c870ff);
+    color: white;
+    padding: 0px 0px;
+    text-align: center;
+}
+
+.general {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.general div {
+    flex: 1;
+    min-width: 150px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: visible;
+}
+
+svg {
+    width: 30px;  /* Asegura un buen tamaño */
+    height: 30px;
+    fill: white;
+    overflow: visible; /* Evita cortes */
+}
+
+/* Redes sociales */
+.servicio ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.servicio svg {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.servicio svg:hover {
+    transform: scale(1.2);
+    fill: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .general {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servicio ul {
+        justify-content: center;
+    }
+}
+
+/* For Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #59a2f6db, #59a2f6db);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #59a2f6db, #59a2f6db);
+}
+/* Categorias */	
+
+.categorias_general h2 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.categorias1 ul, .categorias2 ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
+    gap: 20px; /* Aumenta la separación entre los elementos */
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.categorias1 li, .categorias2 li {
+    background: #ff97d9;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px; /* Tamaño más reducido */
+    transition: box-shadow 0.4s ease; /* Transición para el efecto */
+}
+
+.categorias1 li:hover, .categorias2 li:hover {
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.2); /* Efecto de sombra al pasar el cursor */
+}
+
+.categorias1 li img, 
+.categorias2 li img {
+    width: 60px; /* Tamaño más pequeño */
+    height: auto;
+    margin: 3px;
+    cursor: pointer;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .categorias1 ul, .categorias2 ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categorias1 li, .categorias2 li {
+        width: 85%; /* Hace que ocupen más espacio en pantallas pequeñas */
+    }
+
+    .categorias1 li img, 
+    .categorias2 li img {
+        width: 50px; /* Reduce aún más el tamaño en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .categorias1 li img, 
+    .categorias2 li img{
+        width: 45px; /* Más pequeño en móviles */
+    }
+}

@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+@import url("https://fonts.cdnfonts.com/css/self-deception");
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #e3e3e3;
+}
+
+/* Navbar */
+/* Estilos generales de la navbar */
+.navbar {
+    background: linear-gradient(135deg, #ff97d9, #f210ae);
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}
+
+/* Logo izquierda */
+.navbar-brand {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 0;
+}   
+
+.logo {
+    width: 190px;
+    margin-top: -60px;
+    height: auto;
+}
+
+/* Titulo crazy kid centrado */
+.brand-text {
+    font-family: 'Self Deception', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    padding: 0 3%;
+    border-radius: 10px 10px;
+}
+
+/* Links abajo a la derecha centrados*/	
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    margin-top: 10px;
+    margin-right: 100px;
+    gap: 5px;
+}
+
+/* Estilos de los enlaces */
+.navbar-nav .nav-link {
+    color: white !important;
+    margin: 0 60px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Contenedor flexible */
+.d-flex {
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */
+}
+
+/* Barra de búsqueda posicionada arriba a la derecha */
+.busqueda {
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del input de búsqueda */
+.busqueda input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px;
+    width: 220px;
+}
+
+/* Ícono de búsqueda */
+.busqueda .icono {
+    margin-left: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.busqueda .icono svg {
+    width: 18px;
+    height: 18px;
+    transition: 0.3s;
+    fill: currentColor;
+}
+
+.busqueda .icono:hover svg {
+    color: #007bff;
+}
+
+/* Navbar centrado */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .brand-text {
+        font-size: 35px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .busqueda {
+        width: 100%;
+        max-width: 250px;
+        margin: 10px auto;
+    }
+
+    .busqueda input {
+        width: 100%;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+}
+
+
+/* Categorías */
+.categorias1 {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.categorias1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center; /* Asegura que las categorías estén centradas */
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que las categorías se ajusten en pantallas pequeñas */
+}
+
+.categorias1 ul li {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen esté arriba y el texto debajo */
+    align-items: center;
+}
+
+.categorias1 ul li img {
+    width: 220px;
+    height: 220px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categorias1 ul li img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.categorias1 ul li a {
+    display: block;
+    margin-top: 15px; /* Asegura separación entre la imagen y el texto */
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.categorias1 ul li a:hover {
+    color: #e41f1f;
+    text-shadow: 0 0 6px #e43535;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .categorias1 ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .categorias1 ul li img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .categorias1 ul li a {
+        font-size: 18px;
+    }
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #e6b3ff, #c870ff);
+    color: white;
+    text-align: center;
+}
+
+.general {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+.servicio ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.servicio svg:hover {
+    transform: scale(1.2);
+    fill: #ffcc00;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #59a2f6db, #59a2f6db);
+    border-radius: 3px;
+}
